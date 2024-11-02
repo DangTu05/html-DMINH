@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/category.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="">
+        <div class="head">
+          <div style="text-align: center">
+            <h1 style="color: limegreen; font-family: Arial, Helvetica, sans-serif; align-items: center">LaptopShop</h1>
+          </div>
+          <div class="menu">
+            <nav>
+              <div class="choise" style="display: flex">
+                <div><a href="">Trang Chủ</a></div>
+                <div><a style="color: chartreuse" href="">Sản Phẩm</a></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div style="display: flex; gap: 30px" class="">
+      <div class="container">
+        <div>
+          <div><span>Hãng sản xuất</span></div>
+          <div class="options" style="margin-top: 5px">
+            <label>
+              <input type="checkbox" name="option1" />
+              Apple
+            </label>
+
+            <label>
+              <input type="checkbox" name="option2" />
+              Asus
+            </label>
+
+            <label>
+              <input type="checkbox" name="option3" />
+              Lenovo
+            </label>
+
+            <label>
+              <input type="checkbox" name="option4" />
+              Dell
+            </label>
+
+            <label>
+              <input type="checkbox" name="option5" />
+              LG
+            </label>
+
+            <label>
+              <input type="checkbox" name="option6" />
+              Acer
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span>Mục đích sử dụng</span>
+          </div>
+          <div class="options" style="margin-top: 5px">
+            <label>
+              <input type="checkbox" name="" />
+              Gaming
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Sinh viên - văn phòng
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Thiết kế đồ họa
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Mỏng nhẹ
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Doanh nhân
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span>Mức giá</span>
+          </div>
+          <div class="options" style="margin-top: 5px">
+            <label>
+              <input type="checkbox" name="" />
+              Dưới 10 triệu
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Từ 10 - 15 triệu
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Từ 15 - 20 triệu
+            </label>
+
+            <label>
+              <input type="checkbox" name="" />
+              Trên 20 triệu
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span>Sắp xếp</span>
+          </div>
+          <div class="options" style="margin-top: 5px">
+            <label>
+              <input type="radio" name="sort" value="" />
+              Giá tăng dần
+            </label>
+
+            <label>
+              <input type="radio" name="sort" value="tea" />
+              Giá giảm dần
+            </label>
+
+            <label>
+              <input type="radio" name="sort" value="juice" />
+              Không sắp xếp
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="">
+          <div style="margin-top: 40px">
+            <img class="img" src="/assets/img/product/item-1.png" alt="" />
+          </div>
+          <div class="description">
+            <div>
+              <strong>MacBooK Air 13</strong>
+            </div>
+            <div>
+              <p>Apple M1 GPU 7 nhân</p>
+            </div>
+            <div>
+              <span>17.690.000 đ</span>
+            </div>
+            <div>
+              <div class="add">
+                <span>Add to cart</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const add = document.querySelector(".add");
+      add.onclick = () => {
+        Swal.fire({
+          title: "",
+          text: "Bạn muốn thêm sản phẩm này?",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Vâng, tôi đồng ý"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Thành công",
+              text: "Bạn đã thêm thành công!",
+              icon: "success"
+    });
+  }
+});
+      };
+    </script>
+  </body>
+</html>
